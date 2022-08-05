@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#47BFDF"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/degree"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_marginHorizontal="120dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:textColor="#FFFFFF"
+        android:textSize="64sp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+        app:layout_constraintStart_toStartOf="@id/rectangle_2"
+        app:layout_constraintTop_toTopOf="@id/rectangle_2"
+        tools:text="50" />
+
+    <TextView
+        style="@style/PrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="°"
+        android:textColor="#FFFFFF"
+        android:textSize="32sp"
+        app:layout_constraintStart_toEndOf="@id/degree"
+        app:layout_constraintTop_toTopOf="@id/degree" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/degree"
+        app:layout_constraintStart_toStartOf="@+id/degree"
+        app:layout_constraintTop_toBottomOf="@+id/degree"
+        tools:text="cloudy" />
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_baseline_add_location_alt_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <TextView
+        android:id="@+id/country"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="country"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <View
+        android:id="@+id/rectangle_2"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rectangle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city" />
+
+    <TextView
+        android:id="@+id/wind"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Wind :"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/rectangle_2"
+        app:layout_constraintTop_toBottomOf="@id/description" />
+
+    <TextView
+        android:id="@+id/speed"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:layout_marginEnd="24dp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+        app:layout_constraintTop_toBottomOf="@id/wind"
+        app:layout_constraintTop_toTopOf="@id/wind"
+        tools:text="4.23" />
+
+    <TextView
+        android:id="@+id/hum"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/larg_margin"
+        android:text="Hum  :"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@id/wind"
+        app:layout_constraintTop_toBottomOf="@+id/wind" />
+
+    <TextView
+        android:id="@+id/humidity"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:layout_marginEnd="24dp"
+
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+        app:layout_constraintTop_toTopOf="@id/hum"
+        tools:text="66" />
+
+    <TextView
+        android:id="@+id/weather"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/larg_margin"
+        android:text="weather :"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/mid_text_size"
+        app:layout_constraintStart_toStartOf="@id/hum"
+        app:layout_constraintTop_toBottomOf="@id/hum" />
+
+    <TextView
+        android:id="@+id/main"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+        app:layout_constraintTop_toTopOf="@id/weather"
+        tools:text="cloudy" />
+
+    <TextView
+        android:lines="1"
+        android:id="@+id/city"
+        style="@style/PrimaryTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="8dp"
+        android:textSize="60sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/country"
+        tools:text="City" />
+
+    <EditText
+        android:id="@+id/lon"
+        style="@style/PrimaryTextStyle.Black"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/special_height"
+        android:layout_margin="@dimen/spacing_medium"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/rectangle_border"
+        android:fontFamily="@font/poppins_regular"
+        android:hint="lon"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingHorizontal="@dimen/spacing_medium"
+        android:textColor="@color/white"
+        android:textColorHint="#FFFFFF"
+        android:textSize="16sp"
+        android:theme="@style/TextLabelSearch"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/lan"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
+
+
+    <EditText
+        android:id="@+id/lan"
+        style="@style/PrimaryTextStyle.Black"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/special_height"
+        android:layout_margin="@dimen/spacing_medium"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rectangle_border"
+        android:fontFamily="@font/poppins_regular"
+
+        android:hint="lat"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:paddingHorizontal="@dimen/spacing_medium"
+        android:textColor="@color/white"
+        android:textColorHint="#FFFFFF"
+        android:textSize="16dp"
+        android:theme="@style/TextLabelSearch"
+        app:layout_constraintEnd_toStartOf="@+id/lon"
+        app:layout_constraintStart_toStartOf="@+id/rectangle_2"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle_2" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_fetch"
+        style="@style/PrimaryTextStyle.Regular.PrimaryColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/border"
+        android:paddingHorizontal="36dp"
+        android:paddingVertical="@dimen/spacing_small"
+        android:text="fetch"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

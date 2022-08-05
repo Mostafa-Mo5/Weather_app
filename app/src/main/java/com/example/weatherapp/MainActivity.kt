@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                     val result = Gson().fromJson(jsonString, WeatherModel::class.java)
                     Log.i(TAG,result.toString())
                     runOnUiThread {
-                        binding.speed.text= result.wind?.speed.toString()
+                        binding.speed.text= result.wind?.speed?.toKM()
 
                         binding.country.text= result.country?.country
 
@@ -56,9 +56,9 @@ class MainActivity : AppCompatActivity() {
 
                         binding.main.text= result.weather?.joinToString { it.main.toString() }
 
-                        binding.degree.text = result.main?.temp?.toC()?.toInt().toString()
+                        binding.degree.text = result.main?.temp?.toC()
 
-                        binding.humidity.text = result.main?.humidity.toString()
+                        binding.humidity.text = result.main?.humidity?.tom()
 
                         binding.description.text= result.weather?.joinToString { it.description.toString() }
                     }
